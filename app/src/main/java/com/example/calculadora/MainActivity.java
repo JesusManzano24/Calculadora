@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         // Configurar el botón para navegar a otra actividad
         Button myButton = findViewById(R.id.my_button);
         myButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, .class);
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent);
         });
     }
