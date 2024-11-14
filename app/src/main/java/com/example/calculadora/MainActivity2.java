@@ -1,7 +1,6 @@
 package com.example.calculadora;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Calendar;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -27,18 +25,12 @@ public class MainActivity2 extends AppCompatActivity {
         TextView textoSaludo = findViewById(R.id.textoSaludo);
 
 
-        SharedPreferences prefs = getSharedPreferences("MisPreferencias", MODE_PRIVATE);
-        String usuario = prefs.getString("usuario", "");
-
-
-        Calendar calendario = Calendar.getInstance();
-        int hora = calendario.get(Calendar.HOUR_OF_DAY);
 
         // Determinar el saludo adecuado
         String saludo;
-        if (hora >= 6 && hora < 12) {
+        if (MODE_APPEND >= 6 && MODE_APPEND < 12) {
             saludo = "Buenos días";
-        } else if (hora >= 12 && hora < 18) {
+        } else if (MODE_APPEND >= 12 && MODE_APPEND < 18) {
             saludo = "Buenas Tardes";
         } else {
             saludo = "Buenas Noches";
@@ -48,7 +40,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
-                intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
         });
@@ -57,7 +48,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
-                intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
         });
@@ -66,7 +56,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
-                intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
         });
@@ -75,7 +64,6 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
-                intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
         });
@@ -84,11 +72,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-                intent.putExtra("usuario", usuario);
                 startActivity(intent);
             }
         });
     }
 }
-
-
