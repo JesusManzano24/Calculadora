@@ -13,7 +13,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculadora de Capital en Interés Simple"
+        android:text="Calculadora de Tasa de Interés Simple"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -34,26 +34,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <!-- Entrada para la Tasa de Interés (i) -->
+    <!-- Entrada para el Capital Inicial (C) -->
     <EditText
-        android:id="@+id/editTextInteres"
-        android:layout_width="0dp"
+        android:id="@+id/editTextCapital"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese la Tasa de Interés (i)"
+        android:hint="Ingrese el Capital Inicial (C)"
         android:inputType="numberDecimal"
         app:layout_constraintTop_toBottomOf="@id/editTextMonto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
-    <!-- Entrada para el Tiempo (n) -->
+    <!-- Entrada para el Tiempo (N) -->
     <EditText
         android:id="@+id/editTextTiempo"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingrese el Tiempo (n)"
+        android:hint="Ingrese el Tiempo (N)"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@id/editTextInteres"
+        app:layout_constraintTop_toBottomOf="@id/editTextCapital"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
@@ -63,13 +63,13 @@
         android:id="@+id/btnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular Capital (C)"
+        android:text="Calcular Tasa de Interés (i)"
         app:layout_constraintTop_toBottomOf="@id/editTextTiempo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>
 
-    <!-- Resultado del Capital Calculado -->
+    <!-- Resultado de la Tasa de Interés Calculada -->
     <TextView
         android:id="@+id/textViewResultado"
         android:layout_width="wrap_content"
@@ -80,4 +80,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        app:layout_constraintTop_toBottomOf="@id/textViewResultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/Regresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        app:layout_constraintTop_toBottomOf="@id/Menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

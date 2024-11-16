@@ -7,27 +7,24 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
-public class MainActivity2 extends AppCompatActivity {
+public class menuinteressimple extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.menuineteressimple);
 
 
         Button button1 = findViewById(R.id.Comprar);
         Button button2 = findViewById(R.id.Cambiar);
         Button button3 = findViewById(R.id.consultar);
         Button button4 = findViewById(R.id.Eliminar);
-        Button button5 = findViewById(R.id.Inicio);
-
-
+        Button button5 = findViewById(R.id.Eliminar2);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, menuinteressimple.class);
+                Intent intent = new Intent(menuinteressimple.this, montointeressimple.class);
                 startActivity(intent);
             }
         });
@@ -35,7 +32,7 @@ public class MainActivity2 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, menudescuentosimple.class);
+                Intent intent = new Intent(menuinteressimple.this, capitalinteressimple.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, capitalinteressimple.class);
+                Intent intent = new Intent(menuinteressimple.this, plazointeressimple.class);
                 startActivity(intent);
             }
         });
@@ -51,17 +48,17 @@ public class MainActivity2 extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, capitalinteressimple.class);
+                Intent intent = new Intent(menuinteressimple.this, capitalinteressimple.class);
+                startActivity(intent);
+            }
+        });
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menuinteressimple.this, interes.class);
                 startActivity(intent);
             }
         });
 
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }
