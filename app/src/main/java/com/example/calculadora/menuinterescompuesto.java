@@ -24,6 +24,7 @@ public class menuinterescompuesto extends AppCompatActivity {
         Button button3 = findViewById(R.id.consultar);
         Button button4 = findViewById(R.id.Eliminar);
         Button button5 = findViewById(R.id.Eliminar2);
+        Button button6 = findViewById(R.id.interes);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +45,7 @@ public class menuinterescompuesto extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menuinterescompuesto.this, plazointeressimple.class);
+                Intent intent = new Intent(menuinterescompuesto.this, periodosdecapitalizacioninterescompuesto.class);
                 startActivity(intent);
             }
         });
@@ -52,14 +53,21 @@ public class menuinterescompuesto extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menuinterescompuesto.this, capitalinteressimple.class);
+                Intent intent = new Intent(menuinterescompuesto.this, tasadeinterescapitalizableinterescompuesto.class);
                 startActivity(intent);
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(menuinterescompuesto.this, interes.class);
+                Intent intent = new Intent(menuinterescompuesto.this, plazointerescompuesto.class);
+                startActivity(intent);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(menuinterescompuesto.this, interesinterescompuesto.class);
                 startActivity(intent);
             }
         });
